@@ -117,5 +117,10 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+# set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/stuff/linux/scripts/" ] ; then
+    PATH="$HOME/stuff/linux/scripts/:$PATH"
+fi
+
 export VISUAL=vim
 export EDITOR="$VISUAL"
