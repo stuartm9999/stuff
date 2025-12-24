@@ -132,3 +132,8 @@ alias git-list-untracked='git fetch --prune && git branch -r | awk "{print \$1}"
 alias git-remove-untracked='git fetch --prune && git branch -r | awk "{print \$1}" | egrep -v -f /dev/fd/0 <(git branch -vv | grep origin) | awk "{print \$1}" | xargs git branch -d'
 # set keyvault stuff - not in GIT!
 . ~/SetKeyVault.sh 
+#tells Firefox where to find the magic cookie, so it can authenticate with your local X server.
+#export XAUTHORITY=$HOME/.Xauthority
+# set keyvault stuff - not in GIT!
+. ~/SetKeyVault.sh
+
