@@ -133,9 +133,12 @@ alias git-remove-untracked='git fetch --prune && git branch -r | awk "{print \$1
 # set keyvault stuff - not in GIT!
 . ~/SetKeyVault.sh 
 #tells Firefox where to find the magic cookie, so it can authenticate with your local X server.
-#export XAUTHORITY=$HOME/.Xauthority
+export XAUTHORITY=$HOME/.Xauthority
 # set keyvault stuff - not in GIT!
 . ~/SetKeyVault.sh
+#export BROWSER=/snap/bin/midori
+export GPG_TTY=$(tty)
+export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
 # Start GStreamer pipeline feeding virtualcam if not already running
 if [ -e /dev/video42 ] && ! pgrep -f "v4l2sink device=/dev/video42" > /dev/null; then
     ~/StartGStreamer.sh > /dev/null 2>&1 &
