@@ -139,3 +139,8 @@ export XAUTHORITY=$HOME/.Xauthority
 #export BROWSER=/snap/bin/midori
 export GPG_TTY=$(tty)
 export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+# Start GStreamer pipeline feeding virtualcam if not already running
+if [ -e /dev/video42 ] && ! pgrep -f "v4l2sink device=/dev/video42" > /dev/null; then
+    ~/StartGStreamer.sh > /dev/null 2>&1 &
+fi
+
