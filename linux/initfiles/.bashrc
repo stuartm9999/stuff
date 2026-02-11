@@ -136,4 +136,8 @@ alias git-remove-untracked='git fetch --prune && git branch -r | awk "{print \$1
 #export XAUTHORITY=$HOME/.Xauthority
 # set keyvault stuff - not in GIT!
 . ~/SetKeyVault.sh
+# Start GStreamer pipeline feeding virtualcam if not already running
+if [ -e /dev/video42 ] && ! pgrep -f "v4l2sink device=/dev/video42" > /dev/null; then
+    ~/StartGStreamer.sh > /dev/null 2>&1 &
+fi
 
