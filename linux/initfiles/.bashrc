@@ -144,3 +144,5 @@ if [ -e /dev/video42 ] && ! pgrep -f "v4l2sink device=/dev/video42" > /dev/null;
     ~/StartGStreamer.sh > /dev/null 2>&1 &
 fi
 
+# Add .NET Core SDK tools
+export PATH="$PATH:/home/stuartm@stiona.com/.dotnet/tools"
