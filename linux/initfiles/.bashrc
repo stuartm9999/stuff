@@ -139,3 +139,8 @@ export XAUTHORITY=$HOME/.Xauthority
 #export BROWSER=/snap/bin/midori
 export GPG_TTY=$(tty)
 export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+# Created by `pipx` on 2026-01-07 12:26:42
+export PATH="$PATH:/home/stuartm@stiona.com/.local/bin"
+export PLAYWRIGHT_HOST_PLATFORM_OVERRIDE=ubuntu24.04-x64
+# https://github.com/git-ecosystem/git-credential-manager/blob/main/docs/credstores.md
+export GPG_TTY=$(tty)
