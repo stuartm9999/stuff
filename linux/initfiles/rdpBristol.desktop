@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=RDP Bristol
+Comment=Run my shell script
+Exec=/home/stuartm@stiona.com/rdpBristol.sh
+Icon=utilities-terminal
+Terminal=true
+Categories=Utility;
