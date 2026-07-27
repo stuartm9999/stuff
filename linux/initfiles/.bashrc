@@ -145,3 +145,5 @@ export PATH="$PATH:/home/stuartm@stiona.com/.local/bin"
 # this is to tell playright were on 24.04 as 26 not on list yet.
 export PLAYWRIGHT_HOST_PLATFORM_OVERRIDE=ubuntu24.04-x64
 
+# Add .NET Core SDK tools
+export PATH="$PATH:/home/stuartm@stiona.com/.dotnet/tools"
